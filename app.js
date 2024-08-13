@@ -9,7 +9,6 @@ var indexRouter = require('./routes/indexRoute');
 var authRouter = require('./routes/authRoute');
 const authMiddleware = require('./middlewares/authMiddleware');
 
-
 var app = express();
 
 // view engine setup

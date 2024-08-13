@@ -14,13 +14,13 @@ router.post("/login", async (req, res, next) => {
         req.session.password = password;
         res.redirect("/")
     } catch (error) {
-        res.render("login", { message: "Kullanıcı Adı veya Parola Hatası." })
+        res.render("login", { message: "Yanlış kullanıcı adı veya parola." })
     }
 });
 
 router.get("/logout", async (req, res, next) => {
     req.session.destroy()
-    res.redirect("/")
+    res.redirect("/login")
 });
 
 module.exports = router;
